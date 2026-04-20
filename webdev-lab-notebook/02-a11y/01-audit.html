@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise 01 - Audit</title>
+  </head>
+  <body>
+    <h1>Checkout</h1>
+    <form>
+      <label for="name">Name</label><br />
+      <input type="text" id="name" name="name" autocomplete="name" /><br /><br />
+
+      <label for="address">Address</label><br />
+      <input
+        type="text"
+        id="address"
+        name="address"
+        autocomplete="street-address" /><br /><br />
+
+      <label for="city">City</label><br />
+      <input type="text" id="city" name="city" autocomplete="address-level2" /><br /><br />
+
+      <label for="zip">Zip Code</label><br />
+      <input type="text" id="zip" name="zip" autocomplete="postal-code" /><br /><br />
+
+      <fieldset>
+        <legend>Credit Card Type</legend>
+        <input type="radio" id="card-visa" name="card" value="visa" />
+        <label for="card-visa">Visa</label><br />
+        <input type="radio" id="card-mastercard" name="card" value="mastercard" />
+        <label for="card-mastercard">MasterCard</label><br />
+        <input type="radio" id="card-amex" name="card" value="amex" />
+        <label for="card-amex">American Express</label><br /><br />
+      </fieldset>
+
+      <label for="cc_number">Credit Card Number</label><br />
+      <input
+        type="text"
+        id="cc_number"
+        name="cc_number"
+        inputmode="numeric"
+        autocomplete="cc-number" /><br /><br />
+
+      <label for="cvv">CVC</label><br />
+      <input
+        type="text"
+        id="cvv"
+        name="cvv"
+        inputmode="numeric"
+        autocomplete="cc-csc" /><br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
