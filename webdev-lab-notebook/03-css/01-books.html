@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>CSS Exercise 01 - Books</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body class="books-page">
+    <nav class="books-nav" aria-label="Page sections">
+      <ul class="books-nav-list">
+        <li><a href="#asoiaf-books">ASOIAF Books</a></li>
+        <li><a href="#first-edition-covers">First Edition Covers</a></li>
+        <li><a href="#pov-table">POV Character Table</a></li>
+      </ul>
+    </nav>
+
+    <main class="books-main">
+      <h1 class="books-title">A Song of Ice and Fire - George R.R. Martin</h1>
+
+      <section id="asoiaf-books" class="books-section">
+        <h2>A Song of Ice and Fire universe</h2>
+        <ul class="books-list">
+          <li>
+            A Song of Ice and Fire series:
+            <ol>
+              <li>A Game of Thrones (1996)</li>
+              <li>A Clash of Kings (1998)</li>
+              <li>A Storm of Swords (2000)</li>
+              <li>A Feast for Crows (2005)</li>
+              <li>A Dance with Dragons (2011)</li>
+            </ol>
+          </li>
+          <li>
+            A Knight of the Seven Kingdoms (2015)
+            <ol>
+              <li>The Hedge Knight (1998)</li>
+              <li>The Sworn Sword (2003)</li>
+              <li>The Mystery Knight (2010)</li>
+            </ol>
+          </li>
+          <li>Fire &amp; Blood (2018)</li>
+        </ul>
+      </section>
+
+      <section id="first-edition-covers" class="books-section">
+        <h2>First Edition Covers</h2>
+        <div class="covers-row">
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/9/93/AGameOfThrones.jpg"
+            alt="First edition cover: A Game of Thrones"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/3/39/AClashOfKings.jpg"
+            alt="First edition cover: A Clash of Kings"
+          />
+          <img
+            src="https://upload.wikimedia.org/wikipedia/en/2/24/AStormOfSwords.jpg"
+            alt="First edition cover: A Storm of Swords"
+          />
+        </div>
+      </section>
+
+      <section id="pov-table" class="books-section">
+        <h2>POV Character with the Most Chapters in Each Book</h2>
+        <table class="books-table">
+          <thead>
+            <tr>
+              <th rowspan="2">POV Character</th>
+              <th colspan="5">Books</th>
+              <th rowspan="2">Total Chapters</th>
+            </tr>
+            <tr>
+              <th>A Game of Thrones</th>
+              <th>A Clash of Kings</th>
+              <th>A Storm of Swords</th>
+              <th>A Feast for Crows</th>
+              <th>A Dance with Dragons</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Eddard Stark</td>
+              <td>15</td>
+              <td colspan="4">n/a</td>
+              <td>15</td>
+            </tr>
+            <tr>
+              <td>Tyrion Lannister</td>
+              <td>9</td>
+              <td>15</td>
+              <td>11</td>
+              <td>n/a</td>
+              <td>12</td>
+              <td>47</td>
+            </tr>
+            <tr>
+              <td>Arya Stark</td>
+              <td>5</td>
+              <td>10</td>
+              <td>13</td>
+              <td>3</td>
+              <td>2</td>
+              <td>33</td>
+            </tr>
+            <tr>
+              <td>Cersei Lannister</td>
+              <td colspan="3">n/a</td>
+              <td>10</td>
+              <td>n/a</td>
+              <td>10</td>
+            </tr>
+            <tr>
+              <td>Jon Snow</td>
+              <td>9</td>
+              <td>8</td>
+              <td>12</td>
+              <td>n/a</td>
+              <td>13</td>
+              <td>42</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td colspan="6">Total POV Chapters (Displayed)</td>
+              <td>147</td>
+            </tr>
+          </tfoot>
+        </table>
+      </section>
+    </main>
+  </body>
+</html>

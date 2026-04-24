@@ -1,0 +1,226 @@
+:root {
+  --ice-blue-juvie: #8fbcd4;
+  --gothic-gray-blue: #6f8796;
+  --dark-slate-infinity: #1f2a33;
+  --midnight-blue: #161678;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  color: #101010;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Exercise 01 - Books */
+.books-page {
+  background: #f2f4f6;
+}
+
+.books-nav {
+  background: var(--dark-slate-infinity);
+  border-bottom: 6px solid var(--ice-blue-juvie);
+}
+
+.books-nav-list {
+  width: min(980px, 94%);
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.books-nav-list a {
+  display: inline-block;
+  padding: 16px 18px;
+  color: #f7fbff;
+  text-decoration: none;
+  font-family: "Cinzel", serif;
+  font-size: 15px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.books-nav-list a:hover,
+.books-nav-list a:focus-visible {
+  background: var(--ice-blue-juvie);
+  color: var(--dark-slate-infinity);
+  outline: none;
+}
+
+.books-main {
+  width: min(980px, 94%);
+  margin: 24px auto 40px;
+}
+
+.books-title,
+.books-section h2 {
+  color: var(--dark-slate-infinity);
+  font-family: "Cinzel", serif;
+}
+
+.books-title {
+  margin: 0 0 20px;
+  padding: 14px 18px;
+  background: var(--ice-blue-juvie);
+  border-left: 10px solid var(--gothic-gray-blue);
+  font-size: 32px;
+}
+
+.books-section {
+  margin-bottom: 22px;
+}
+
+.books-list li {
+  margin-bottom: 8px;
+}
+
+.covers-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.covers-row img {
+  width: 200px;
+  height: 305px;
+  object-fit: cover;
+  border: 5px solid #fff;
+  box-shadow: 0 1px 7px rgb(0 0 0 / 0.25);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.covers-row img:hover {
+  transform: translateY(-5px) scale(1.02);
+  box-shadow: 0 9px 18px rgb(0 0 0 / 0.3);
+  filter: saturate(1.2);
+}
+
+.books-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #fff;
+}
+
+.books-table th,
+.books-table td {
+  border: 1px solid #28343d;
+  padding: 8px;
+  text-align: center;
+}
+
+.books-table thead th {
+  background: var(--gothic-gray-blue);
+  color: #fff;
+}
+
+.books-table tfoot td {
+  background: #d9e2e8;
+  font-weight: 700;
+}
+
+/* Exercise 02 - Form */
+.form-page {
+  min-height: 100vh;
+  background: var(--midnight-blue);
+}
+
+.form-wrapper {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 28px;
+}
+
+.ira-card {
+  width: 460px;
+  max-width: 100%;
+  background: #fff;
+  border-radius: 6px;
+  padding: 28px 30px 22px;
+}
+
+.ira-card h1 {
+  margin: 0 0 24px;
+  color: #1c237b;
+  text-align: center;
+  font-size: 45px;
+}
+
+.ira-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+}
+
+.form-row label,
+.radio-row legend {
+  font-size: 19px;
+}
+
+.form-row input {
+  width: 175px;
+  height: 35px;
+  border: 1px solid #cfcfcf;
+  border-radius: 4px;
+  padding: 4px 8px;
+  font-size: 17px;
+}
+
+.radio-row {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.radio-row legend {
+  margin-bottom: 8px;
+  padding: 0;
+}
+
+.radio-row label {
+  margin-right: 18px;
+  font-size: 17px;
+}
+
+.button-row {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.button-row button {
+  flex: 1;
+  border: 0;
+  border-radius: 5px;
+  padding: 11px 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background: #1c237b;
+  color: #fff;
+}
+
+.btn-secondary {
+  background: #d5d5d5;
+  color: #111;
+}
+
+.form-footnote {
+  margin: 18px 0 0;
+  font-size: 12px;
+  line-height: 1.3;
+}
