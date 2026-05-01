@@ -1,0 +1,237 @@
+:root {
+  --purple: #800080;
+  --light-text-color: #fefefe;
+  --bg-page: #f5f5f5;
+  --dark-slate: #1f2a33;
+  --light-blue: #8fbcd4;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Exercise 01 - Center */
+.center-page .container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  width: 200px;
+  height: 100px;
+  padding: 1rem;
+  background: var(--purple);
+  color: var(--light-text-color);
+  font-size: 1.75rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Common styles for Flexbox and CSS Grid */
+.flex-item,
+.grid-item {
+  padding: 10px;
+  background-color: var(--purple);
+  color: var(--light-text-color);
+  font-size: 2em;
+  text-align: center;
+}
+
+.flex-item {
+  width: 160px;
+  height: 80px;
+  margin: 10px;
+}
+
+/* Exercise 02 - Flexbox */
+.flexbox-page {
+  background: var(--bg-page);
+  color: #111;
+}
+
+.flexbox-page .top-of-page,
+.flexbox-page .bottom-of-page {
+  min-height: 90px;
+  background: var(--dark-slate);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.flexbox-page .top-of-page h1,
+.flexbox-page .bottom-of-page p {
+  margin: 0;
+}
+
+.flexbox-page .navigation {
+  background: #e8ecef;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.flexbox-page .navigation a {
+  color: #111;
+  text-decoration: none;
+  padding: 14px 18px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.flexbox-page .navigation a:hover,
+.flexbox-page .navigation a:focus-visible {
+  background: var(--light-blue);
+  color: #000;
+  outline: none;
+}
+
+.flexbox-page .main-area {
+  width: min(1000px, 94%);
+  margin: 24px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.flexbox-page .page-area {
+  background: #fff;
+  border: 1px solid #ccd3d9;
+  padding: 16px;
+  display: flex;
+  gap: 18px;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.flexbox-page .content-copy {
+  flex: 1 1 auto;
+}
+
+.flexbox-page .content-copy h2 {
+  margin-top: 0;
+}
+
+.flexbox-page figure {
+  margin: 0;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.flexbox-page figure img {
+  max-width: 100%;
+  max-height: 220px;
+  object-fit: contain;
+}
+
+.flexbox-page figcaption {
+  font-size: 0.9rem;
+}
+
+/* Exercise 03 - CSS Grid */
+.grid-page {
+  background: var(--bg-page);
+}
+
+.grid-page-main {
+  width: min(980px, 94%);
+  margin: 22px auto;
+}
+
+.grid-page .grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 80px 140px 140px 80px;
+  gap: 10px;
+}
+
+.grid-page .item1 {
+  grid-column: 1 / -1;
+}
+
+.grid-page .item8 {
+  grid-column: 1 / -1;
+}
+
+/* Exercise 04 - CSS Grid Areas */
+.grid-areas-page {
+  background: var(--bg-page);
+}
+
+.grid-areas-main {
+  width: min(980px, 94%);
+  margin: 22px auto;
+}
+
+.areas-container {
+  display: grid;
+  gap: 10px;
+  grid-template-areas:
+    "header"
+    "article"
+    "section"
+    "footer";
+  grid-template-columns: 1fr;
+  grid-template-rows: 90px 1fr 1fr 90px;
+  min-height: 70vh;
+}
+
+.grid-areas-page .header {
+  grid-area: header;
+}
+
+.grid-areas-page .article {
+  grid-area: article;
+}
+
+.grid-areas-page .aside {
+  grid-area: aside;
+  display: none;
+}
+
+.grid-areas-page .section {
+  grid-area: section;
+}
+
+.grid-areas-page .footer {
+  grid-area: footer;
+}
+
+@media (min-width: 768px) {
+  .areas-container {
+    grid-template-areas:
+      "header header"
+      "article section"
+      "footer footer";
+    grid-template-columns: 1.4fr 1fr;
+    grid-template-rows: 90px 1fr 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .areas-container {
+    grid-template-areas:
+      "header header header"
+      "article section aside"
+      "footer footer footer";
+    grid-template-columns: 1.5fr 1fr 0.8fr;
+    grid-template-rows: 90px 1fr 90px;
+  }
+
+  .grid-areas-page .aside {
+    display: block;
+  }
+}
