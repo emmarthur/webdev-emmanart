@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Exercise 01 - Cards</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#">Simple Game Showcase</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#mainNavbar"
+          aria-controls="mainNavbar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="mainNavbar">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Games</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4 py-lg-5">
+      <h1 class="text-center mb-4 mb-lg-5">Simple Game Showcase</h1>
+
+      <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 justify-content-center">
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://picsum.photos/seed/chessboard/600/360"
+              class="card-img-top"
+              alt="Chess board game pieces"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title h5">Chess</h2>
+              <p class="card-text text-muted small flex-grow-1">
+                Classic strategy for two players. Plan moves, protect your king, and checkmate
+                your opponent.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary mt-2"
+                data-bs-toggle="modal"
+                data-bs-target="#modalChess"
+              >
+                More info
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://picsum.photos/seed/sudokugrid/600/360"
+              class="card-img-top"
+              alt="Sudoku number puzzle"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title h5">Sudoku</h2>
+              <p class="card-text text-muted small flex-grow-1">
+                Fill a 9×9 grid so every row, column, and 3×3 box contains digits 1–9 exactly
+                once.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary mt-2"
+                data-bs-toggle="modal"
+                data-bs-target="#modalSudoku"
+              >
+                More info
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col">
+          <div class="card h-100 shadow-sm">
+            <img
+              src="https://picsum.photos/seed/tetrisblocks/600/360"
+              class="card-img-top"
+              alt="Colorful falling blocks puzzle game"
+            />
+            <div class="card-body d-flex flex-column">
+              <h2 class="card-title h5">Tetris</h2>
+              <p class="card-text text-muted small flex-grow-1">
+                Rotate falling pieces to complete horizontal lines before the stack reaches the
+                top.
+              </p>
+              <button
+                type="button"
+                class="btn btn-primary mt-2"
+                data-bs-toggle="modal"
+                data-bs-target="#modalTetris"
+              >
+                More info
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Modals -->
+    <div
+      class="modal fade"
+      id="modalChess"
+      tabindex="-1"
+      aria-labelledby="modalChessLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="modalChessLabel">Chess</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Chess is one of the world’s oldest board games. Each player starts with sixteen
+              pieces and takes turns moving according to fixed rules. The goal is to place the
+              opponent’s king in an inescapable attack—checkmate.
+            </p>
+            <p class="mb-0 text-muted small">
+              Great for learning planning, pattern recognition, and thinking several moves ahead.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalSudoku"
+      tabindex="-1"
+      aria-labelledby="modalSudokuLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="modalSudokuLabel">Sudoku</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Sudoku puzzles start with a partially filled grid. Using logic alone—no guessing
+              required in well-formed puzzles—you deduce where each digit belongs until the grid
+              is complete.
+            </p>
+            <p class="mb-0 text-muted small">
+              Difficulty scales from easy beginner grids to expert puzzles with few starting clues.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="modalTetris"
+      tabindex="-1"
+      aria-labelledby="modalTetrisLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title fs-5" id="modalTetrisLabel">Tetris</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <p>
+              Tetrominoes fall one at a time; you move and rotate them to form solid rows. When a
+              row is complete it clears, scoring points and freeing space. Speed increases as you
+              progress.
+            </p>
+            <p class="mb-0 text-muted small">
+              The game rewards quick decisions and spatial awareness under pressure.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
